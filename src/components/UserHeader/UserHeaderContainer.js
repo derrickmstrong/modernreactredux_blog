@@ -12,9 +12,12 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    getUser: id => dispatch(fetchUser(id)),
+    getUser: id => dispatch(fetchUser(id)), // No longer in use in favor of fetchPostsAndUsers in PostList
   };
 };
 
 // First argument to connect is mapStateToProp, second argument mapStateToDispatch
-export default connect(mapStateToProps, mapDispatchToProps)(UserHeader);
+export default connect(
+    mapStateToProps, 
+    // mapDispatchToProps
+    )(UserHeader);

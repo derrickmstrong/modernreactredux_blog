@@ -1,11 +1,12 @@
-import React, { useEffect } from 'react'
+import React from 'react'
+// import { useEffect } from 'react'
 
 const UserHeader = (props) => {
     const { user, getUser, userId } = props
     
-    useEffect(() => {
-        getUser(userId)  
-    }, [getUser, userId])
+    // useEffect(() => {
+    //     getUser(userId)  
+    // }, [getUser, userId])
     
     
     if (!user) return null

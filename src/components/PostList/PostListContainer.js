@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchPosts } from '../../store/actions';
+import { fetchPosts, fetchPostsAndUsers } from '../../store/actions';
 
 import PostList from './PostList'
 
@@ -11,7 +11,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    getPosts: () => dispatch(fetchPosts()),
+    getPosts: () => dispatch(fetchPosts()), // No longer in use
+    getPostsAndUsers: () => dispatch(fetchPostsAndUsers()),
   };
 };
 

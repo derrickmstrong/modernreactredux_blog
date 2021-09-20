@@ -2,11 +2,11 @@ import React, { useEffect } from 'react';
 import UserHeader from '../UserHeader/UserHeaderContainer';
 
 const PostList = props => {
-  const { posts, getPosts } = props;
+  const { posts, getPostsAndUsers } = props;
 
   useEffect(() => {
-    getPosts();
-  }, [getPosts]);
+    getPostsAndUsers();
+  }, [getPostsAndUsers]);
   
   if (!posts) return null
 
